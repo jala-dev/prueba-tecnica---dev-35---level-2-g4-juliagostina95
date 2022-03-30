@@ -22,8 +22,14 @@ namespace Presentation.View
         }
 
         public void ShowResult(double total)
-        {            
-            Console.WriteLine("R. La deuda total del socio es: {0}",total);
+        {
+            Member entity = new Member();
+            Consumption entity2 = new Consumption();
+            if (entity.ID == null)
+            {
+                Console.WriteLine("el codigo ingresado no existe en el sistema");
+            }
+            Console.WriteLine("R. El consumo del socio {entity.ID} es de {entity2.Value} cubos. La deuda actual es de {2} Bs.");
             Console.WriteLine("======================================");
         }
     }
